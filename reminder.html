@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300&family=Forum&display=swap" rel="stylesheet"> 
-    <!-- <script src="https:kit.fontawesome.com/289ffcdb56.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <title>reminder</title>
@@ -25,9 +24,8 @@
             color:  #3d3d3d !important;
             font-family: 'Forum', cursive !important;
             font-size: 10.6757px;
+            font-size: 60%;
             margin: auto;
-            padding-left: 80px;
-            padding-right: 80px;
         }
         .row{
             display: flex;
@@ -62,7 +60,7 @@
             position: absolute;
             right: 0px;
             top: 22.5px;
-            font-size: 26.1804px;
+            font-size: 36.1804px;
         }
         .invoice_info{
             position: relative;
@@ -81,11 +79,11 @@
         }
         .reminder_text_title{
             letter-spacing: 3.5px;
-            /* margin-bottom: 20px; */
-        }
-        /* .reminder_text .upper_text{
             margin-bottom: 20px;
-        } */
+        }
+        .reminder_text .upper_text{
+            margin-bottom: 20px;
+        }
         .table{
             position: relative;
             margin-top: 37px;
@@ -102,9 +100,9 @@
             padding-left: 30px;
             
         }
-        /* .table_rows div{
+        .table_rows div{
             padding-top: 12.5px;
-        } */
+        }
         .even{
             background-color: #f1eeeb;
         }
@@ -133,10 +131,13 @@
             font-size: 16px;
         }
         .total{
-            padding-left: 305px;
+            position: absolute;
+            right:0;
+            top:0;
+            padding-right: 25px;
             font-size: 13.333333333333332px;
             text-align: end;
-        } 
+        }
         .total .col div{
             margin-bottom: 15px;
             
@@ -165,10 +166,9 @@
         }
         .footer{
             color: #623405;
-            margin-top: 67.5px;
-            position: relative;
-            /*position:absolute;
-            top: 14in; */
+            /* margin-top: 67.5px; */
+            position:absolute;
+            top: 14in;
         }
         .footer i{
             margin-right: 15px;
@@ -179,18 +179,17 @@
         .footer .location{
             margin-left: 40px;
         }
-        /* .footer_key{
+        .footer_key{
             position:absolute;
             left: 140px;
-            top: 0px;
-        } */
+            top: 40px;
+        }
         .inline{
             display: inline;
         }
         .inline_block{
             display: inline-block;
         }
-        
     </style>
 
 </head>
@@ -257,12 +256,12 @@
 
         <!------------------REMINDER TEXT--------------->
         <div class="col reminder_text">
-            <div class="reminder_text_title"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div></br>
+            <div class="reminder_text_title"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
             <div class="upper_text">
                 Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna
                 påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att
                 överlämnas till inkasso vilket medför ytterligare kostnader.
-            </div></br>
+            </div>
             <div>
                 Ār fakturan redan betald?</br>
                 Om du har betalat rekommenderar vi dig att kontrollera att du har betalat till rätt bankgiro och med rätt referens.
