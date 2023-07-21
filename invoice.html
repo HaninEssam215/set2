@@ -23,9 +23,8 @@
             color:  #3d3d3d !important;
             font-family: 'Forum', cursive !important;
             font-size: 10.6757px;
+            font-size: 60%;
             margin: auto;
-            padding-left: 80px;
-            padding-right: 80px;
         }
         .row{
             display: flex;
@@ -60,7 +59,7 @@
             position: absolute;
             right: 0px;
             top: 22.5px;
-            font-size: 26.1804px;
+            font-size: 36.1804px;
         }
         .invoice_info{
             position: relative;
@@ -79,11 +78,11 @@
         }
         .reminder_text_title{
             letter-spacing: 3.5px;
-            /* margin-bottom: 20px; */
-        }
-        /* .reminder_text .upper_text{
             margin-bottom: 20px;
-        } */
+        }
+        .reminder_text .upper_text{
+            margin-bottom: 20px;
+        }
         .table{
             position: relative;
             margin-top: 37px;
@@ -132,6 +131,8 @@
         }
         .total{
             position: absolute;
+            right:0;
+            top:0;
             padding-right: 25px;
             font-size: 13.333333333333332px;
             text-align: end;
@@ -164,10 +165,9 @@
         }
         .footer{
             color: #623405;
-            margin-top: 67.5px;
-            position: relative;
-            /*position:absolute;
-            top: 14in; */
+            /* margin-top: 67.5px; */
+            position:absolute;
+            top: 14in;
         }
         .footer i{
             margin-right: 15px;
@@ -181,7 +181,7 @@
         .footer_key{
             position:absolute;
             left: 140px;
-            top: 0px;
+            top: 40px;
         }
         .inline{
             display: inline;
@@ -189,7 +189,6 @@
         .inline_block{
             display: inline-block;
         }
-        
     </style>
 
 </head>
@@ -198,21 +197,6 @@
     <div class="container">
 
         <!------------------------HEADER---------------->
-        <!-- <div class="row header">
-            <div class="col">
-                <div class="page_no">
-                    PAGE 1/1
-                </div>
-                <div class="page_name title brown">
-                    REMINDER
-                </div>
-            </div>
-            <div class="col logo title">
-                <div>
-                    LOGO
-                </div>
-            </div>
-        </div> -->
         <div class="header">
             <div class="page_no">
                 <p>PAGE 1/1</p>
@@ -256,12 +240,12 @@
 
         <!------------------REMINDER TEXT--------------->
         <div class="col reminder_text">
-            <div class="reminder_text_title"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div></br>
+            <div class="reminder_text_title"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
             <div class="upper_text">
                 Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna
                 påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att
                 överlämnas till inkasso vilket medför ytterligare kostnader.
-            </div></br>
+            </div>
             <div>
                 Ār fakturan redan betald?</br>
                 Om du har betalat rekommenderar vi dig att kontrollera att du har betalat till rätt bankgiro och med rätt referens.
