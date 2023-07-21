@@ -6,27 +6,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300&family=Forum&display=swap" rel="stylesheet"> 
-  
+    <script src="https:kit.fontawesome.com/289ffcdb56.js" crossorigin="anonymous"></script>
     <title>reminder</title>
 
     <style>
         body{
             display: flex;
-            justify-content: center;
+            /* justify-content: center; */
             background-color: #f6f5f4 !important;
+            font-size: 150% !important;
             
         }
         .container{
             width: 8.5in;
+            height: 14.52in;
             color:  #3d3d3d !important;
             font-family: 'Forum', cursive !important;
             font-size: 10.6757px;
+            font-size: 60%;
             margin: auto;
         }
         .row{
             display: flex;
             flex-direction: row;
         }
+
         .col{
             display: flex;
             flex-direction: column;
@@ -36,9 +40,11 @@
         }
         .header{
             position: relative;
+            /* margin-top: 100px; */
         }
         .page_no{
             font-family: 'Biryani', sans-serif !important;
+            padding-top: 15px;
         }
         .brown{
             color: #7b440b!important;
@@ -46,10 +52,13 @@
         .page_name{
             font-size: 22.9993px;
             font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 36px;
         }
         .logo{
             position: absolute;
-            right: 0;
+            right: 0px;
+            top: 22.5px;
             font-size: 36.1804px;
         }
         .invoice_info{
@@ -59,10 +68,13 @@
         }
         .invoice_by{
             position:absolute;
-            right:0;
+            right: 30px;
         }
         .invoice_by_info{
             margin-bottom: 20px;
+        }
+        .reminder_text{
+            margin-top: 15px;
         }
         .reminder_text_title{
             letter-spacing: 3.5px;
@@ -87,6 +99,9 @@
             padding-left: 30px;
             
         }
+        .table_rows div{
+            padding-top: 12.5px;
+        }
         .even{
             background-color: #f1eeeb;
         }
@@ -98,6 +113,82 @@
             right: 0;
             padding-right: 27.5px;
         }
+        .payment{
+            position: relative;
+            margin-top: 25px;
+        }
+        .payment_method div,
+        .iban div,
+        .bank_transfer div{
+            margin-bottom: 5px;
+        }
+        .terms{
+            margin-top: 26px;
+        }
+        .payment_method .title{
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .total{
+            position: absolute;
+            right:0;
+            top:0;
+            padding-right: 25px;
+            font-size: 13.333333333333332px;
+            text-align: end;
+        }
+        .total .col div{
+            margin-bottom: 15px;
+            
+        }
+        .total .values{
+            margin-left: 30px;
+            text-align: start;
+            
+        }
+        .total .titles{
+            font-size: 12px;
+        }
+        .total .values{
+            font-size: 13.333333333333332px;
+        }
+        .total_amount{
+            text-align: center;
+        }
+        .total_amount,
+        .total_value{
+            margin-top: 12.5px;
+        }
+        .iban,
+        .bank_transfer{
+            margin-top: 19px;
+        }
+        .footer{
+            color: #623405;
+            /* margin-top: 67.5px; */
+            position:absolute;
+            top: 14in;
+        }
+        .footer i{
+            margin-right: 15px;
+        }
+        .footer .mail{
+            margin-left: 100px;
+        }
+        .footer .location{
+            margin-left: 40px;
+        }
+        .footer_key{
+            position:absolute;
+            left: 140px;
+            top: 40px;
+        }
+        .inline{
+            display: inline;
+        }
+        .inline_block{
+            display: inline-block;
+        }
     </style>
 
 </head>
@@ -106,7 +197,7 @@
     <div class="container">
 
         <!------------------------HEADER---------------->
-        <div class="row header">
+        <!-- <div class="row header">
             <div class="col">
                 <div class="page_no">
                     PAGE 1/1
@@ -120,12 +211,24 @@
                     LOGO
                 </div>
             </div>
+        </div> -->
+        <div class="header">
+            <div class="page_no">
+                <p>PAGE 1/1</p>
+            </div>
+            <div class="title inline Header">
+                <h1 class="inline">REMINDER</h1>
+            </div>
+            <div class="logo inline Header">
+                <h2 class="inline">LOGO</h2>
+            </div>
         </div>
 
 
+
         <!-----------------------INVOICE INFO----------->
-        <div class="row invoice_info">
-            <div class="col invoice_for">
+        <div class="invoice_info">
+            <div class="col invoice_for inline_block">
                 <div><b>INVOICE FOR</b></div>
                 <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
                 <div>Date: 21/05/2022</div>
@@ -133,7 +236,7 @@
                 <div>&#60;receiver_extra_field1>: &#60;value1></div>
                 <div>&#60;receiver_extra_field2>: &#60;value2></div>
             </div>
-            <div class="col invoice_by">
+            <div class="col invoice_by inline">
                 <div class="invoice_by_info">
                     <div><b>INVOICE BY</b></div>
                     <div>&#60;company_name></div>
@@ -166,31 +269,95 @@
 
         <!--------------------REMINDER TABLE-------------->
         <div class="table col">
-            <div class="row table_rows odd">
+            <div class="table_rows odd inline-block">
                 <div class="title">REMINDER REFERS TO.</div>
             </div>
             <div class="row table_rows even">
-                <div>Invoce:</div>
-                <div class="value">$ 100</div>
+                <div class="inline_block">Invoice:</div>
+                <div class="value inline_block">$ 100</div>
             </div>
             <div class="row table_rows odd">
-                <div>Invoce amount:</div>
-                <div class="value">$ 750</div>
+                <div class="inline_block">Invoce amount:</div>
+                <div class="value inline_block">$ 750</div>
             </div>
             <div class="row table_rows even">
-                <div>Due date:</div>
-                <div class="value">$ 500</div>
+                <div class="inline_block">Due date:</div>
+                <div class="value inline_block">$ 500</div>
             </div>
             <div class="row table_rows odd">
-                <div>Reminder fee:</div>
-                <div class="value">$ 300</div>
+                <div class="inline_block">Reminder fee:</div>
+                <div class="value inline_block">$ 300</div>
             </div>
             <div class="row table_rows even">
-                <div>Interest fee:</div>
-                <div class="value">$ 100</div>
+                <div class="inline_block">Interest fee:</div>
+                <div class="value inline_block">$ 100</div>
             </div>
         </div>
 
+
+        <!-----------------------PAYMENT---------------------->
+        <div class="payment">
+            <div class="col">
+                <div class="row">
+                    <div class="col payment_method">
+                        <div class="title"><b>Payment Method</b></div>
+                        <div>Bankgiro-number: 1234-5678</div>
+                        <div>Plusgiro-number: 1234567-345</div>
+                        <div>Swish-number: 12345678</div>
+                    </div>
+                    <div class="total">
+                        <div class="col titles inline_block">
+                            <div>
+                                Total excel. VAT :
+                            </div>
+                            <div>Invoice discount :</div>
+                            <div>Total VAT :</div>
+                            <div class="total_amount"><b>TOTAL</b></div>
+                        </div>
+                        <div class="col values inline_block">
+                            <div>$ 2 300</div>
+                            <div>$ 207</div>
+                            <div>$ 207</div>
+                            <div class="total_value"><b>$ 2 507</b></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col iban">
+                    <div><b>IBAN</b></div>
+                    <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
+                    <div>Swift-number: BNOR PH MMXXX</div>
+                    <div>Bank: SEB</div>
+                </div>
+                <div class="col bank_transfer">
+                    <div><b>BANK TRANSFER</b></div>
+                    <div>Account number: DE89370400440532013000</div>
+                    <div>Clearing number: DEBLZ12345678</div>
+                    <div>Bank: SEB</div>
+                </div>
+                <div class="col terms">
+                    <div>
+                        Terms of payment: 6
+                    </div>
+                    <div>Late interest rate: 10.50% per annum</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-----------------------FOOTER------------------>
+        <div class="col footer">
+            <div class="contacts">
+                <div class="row phone inline"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
+                <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
+                <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
+            
+            </div>
+            <div class="footer_key">
+                <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
+                <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+            </div>
+        </div>
 
     </div>
 
