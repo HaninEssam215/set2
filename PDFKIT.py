@@ -1,6 +1,6 @@
 import pdfkit
 
-path_to_file = 'invoice.html'
+path_to_file = 'collection.html'
 
 
 options = {
@@ -12,4 +12,4 @@ options = {
     'enable-local-file-access': True,
 }
 
-pdfkit.from_file(path_to_file, 'output.pdf', options=options)
+pdfkit.from_file(path_to_file, 'collection_output.pdf', options=options)
