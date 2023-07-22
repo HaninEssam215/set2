@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300&family=Forum&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <title>reminder</title>
 
     <style>
+        @font-face {
+            font-family: 'lovelace'; /* You can choose any name for the font-family */
+            src: url('fonts/Lovelace-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'open sauce';
+            src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'evolve sans';
+            src: url('fonts/MADE Evolve Sans Regular (PERSONAL USE).otf') format('opentype');
+        }
+        .cormorant{
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .poppins{
+            font-family: 'Poppins', sans-serif;
+        }
+        .evolve{
+            font-family: 'evolve sans', sans-serif;
+        }
+        .open_sauce{
+            font-family: 'open sauce', sans-serif;
+        }
         body{
             display: flex;
             /* justify-content: center; */
@@ -22,10 +46,10 @@
             width: 8.5in;
             height: 14.52in;
             color:  #3d3d3d !important;
-            font-family: 'Forum', cursive !important;
             font-size: 10.6757px;
             font-size: 60%;
             margin: auto;
+            letter-spacing: 2.5px;
         }
         .row{
             display: flex;
@@ -36,15 +60,11 @@
             display: flex;
             flex-direction: column;
         }
-        .title{
-            font-family: 'Biryani', sans-serif !important;
-        }
         .header{
             position: relative;
             /* margin-top: 100px; */
         }
         .page_no{
-            font-family: 'Biryani', sans-serif !important;
             padding-top: 15px;
         }
         .brown{
@@ -55,27 +75,42 @@
             font-weight: bold;
             margin-top: 30px;
             margin-bottom: 36px;
+            font-family: 'lovelace', serif !important;
+            letter-spacing: 10px;
         }
         .logo{
             position: absolute;
             right: 0px;
             top: 22.5px;
             font-size: 36.1804px;
+            letter-spacing: 10px;
         }
         .invoice_info{
             position: relative;
             height: 128px;
             margin-bottom: 50px;
+            margin-top: 35px;
+            white-space: nowrap;
         }
         .invoice_by{
             position:absolute;
             right: 30px;
         }
+        .ocr{
+            margin-top: 20px;
+        }
         .invoice_by_info{
             margin-bottom: 20px;
         }
+        .invoice_by div{
+            margin-bottom: 1px;
+        }
+        .invoice_for div{
+            margin-bottom: 1px;
+        }
         .reminder_text{
-            margin-top: 15px;
+            margin-top: 105px;
+            text-align: justify;
         }
         .reminder_text_title{
             letter-spacing: 3.5px;
@@ -87,12 +122,13 @@
         .table{
             position: relative;
             margin-top: 37px;
+            white-space: nowrap;
         }
         .table .title{
             font-size: 13.333333333333332px;
         }
         .table_rows{
-            height: 40px;
+            height: 45px;
             display: flex;
             align-items: center;
             border-bottom: 1px solid #a6a6a6 ;
@@ -113,6 +149,7 @@
             position: absolute;
             right: 0;
             padding-right: 27.5px;
+            white-space: nowrap;
         }
         .payment{
             position: relative;
@@ -123,12 +160,16 @@
         .bank_transfer div{
             margin-bottom: 5px;
         }
+        .payment_method .title{
+            margin-bottom: 20px;
+        }
         .terms{
             margin-top: 26px;
         }
         .payment_method .title{
             margin-bottom: 15px;
             font-size: 16px;
+            margin-bottom: 20px;
         }
         .total{
             position: absolute;
@@ -137,6 +178,7 @@
             padding-right: 25px;
             font-size: 13.333333333333332px;
             text-align: end;
+            white-space: nowrap;
         }
         .total .col div{
             margin-bottom: 15px;
@@ -166,12 +208,12 @@
         }
         .footer{
             color: #623405;
-            /* margin-top: 67.5px; */
-            position:absolute;
-            top: 14in;
+            margin-top: 130px;
+            letter-spacing: 0 !important;
         }
         .footer i{
             margin-right: 15px;
+            font-size: 22px;
         }
         .footer .mail{
             margin-left: 100px;
@@ -180,9 +222,8 @@
             margin-left: 40px;
         }
         .footer_key{
-            position:absolute;
-            left: 140px;
-            top: 40px;
+            margin-top: 22.5px;
+            padding-left: 145px;
         }
         .inline{
             display: inline;
@@ -195,7 +236,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container evolve">
 
         <!------------------------HEADER---------------->
         <!-- <div class="row header">
@@ -217,11 +258,11 @@
             <div class="page_no">
                 <p>PAGE 1/1</p>
             </div>
-            <div class="title inline Header">
-                <h1 class="inline">REMINDER</h1>
+            <div class="inline Header">
+                <h1 class="inline page_name brown">REMINDER</h1>
             </div>
             <div class="logo inline Header">
-                <h2 class="inline">LOGO</h2>
+                <h2 class="inline cormorant">LOGO</h2>
             </div>
         </div>
 
@@ -230,7 +271,7 @@
         <!-----------------------INVOICE INFO----------->
         <div class="invoice_info">
             <div class="col invoice_for inline_block">
-                <div><b>INVOICE FOR</b></div>
+                <div class="open_sauce"><b>INVOICE FOR</b></div>
                 <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
                 <div>Date: 21/05/2022</div>
                 <div>Number: +123-456-7890</div>
@@ -239,7 +280,7 @@
             </div>
             <div class="col invoice_by inline">
                 <div class="invoice_by_info">
-                    <div><b>INVOICE BY</b></div>
+                    <div class="open_sauce"><b>INVOICE BY</b></div>
                     <div>&#60;company_name></div>
                     <div>&#60;organisation_number></div>
                     <div>&#60;vat_number></div>
@@ -256,7 +297,7 @@
 
         <!------------------REMINDER TEXT--------------->
         <div class="col reminder_text">
-            <div class="reminder_text_title"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
+            <div class="reminder_text_title open_sauce"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
             <div class="upper_text">
                 Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna
                 påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att
@@ -271,14 +312,14 @@
         <!--------------------REMINDER TABLE-------------->
         <div class="table col">
             <div class="table_rows odd inline-block">
-                <div class="title">REMINDER REFERS TO.</div>
+                <div class="cormorant brown">REMINDER REFERS TO.</div>
             </div>
             <div class="row table_rows even">
                 <div class="inline_block">Invoice:</div>
                 <div class="value inline_block">$ 100</div>
             </div>
             <div class="row table_rows odd">
-                <div class="inline_block">Invoce amount:</div>
+                <div class="inline_block">Invoice amount:</div>
                 <div class="value inline_block">$ 750</div>
             </div>
             <div class="row table_rows even">
@@ -348,7 +389,7 @@
 
         <!-----------------------FOOTER------------------>
         <div class="col footer">
-            <div class="contacts">
+            <div class="contacts poppins">
                 <div class="row phone inline"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
                 <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
                 <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
