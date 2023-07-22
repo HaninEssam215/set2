@@ -1,6 +1,6 @@
 import pdfkit
 
-path_to_file = 'reminder.html'
+path_to_file = 'invoice.html'
 
 
 options = {

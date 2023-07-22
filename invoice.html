@@ -5,11 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300&family=Forum&display=swap" rel="stylesheet"> 
-    <script src="https:kit.fontawesome.com/289ffcdb56.js" crossorigin="anonymous"></script>
-    <title>reminder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    
+    <title>invoice</title>
 
     <style>
+        @font-face {
+            font-family: 'lovelace'; /* You can choose any name for the font-family */
+            src: url('fonts/Lovelace-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'open sauce';
+            src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'evolve sans';
+            src: url('fonts/MADE Evolve Sans Regular (PERSONAL USE).otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'beautifully delicious';
+            src: url('fonts/BeautifullyDelicious.ttf') format('truetype');
+        }
+        .cormorant{
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .poppins{
+            font-family: 'Poppins', sans-serif;
+        }
+        .evolve{
+            font-family: 'evolve sans', sans-serif;
+        }
+        .open_sauce{
+            font-family: 'open sauce', sans-serif;
+        }
+        .beautifully_delicious{
+            font-family: 'beautifully delicious', sans-serif;
+        }
         body{
             display: flex;
             /* justify-content: center; */
@@ -21,10 +54,10 @@
             width: 8.5in;
             height: 14.52in;
             color:  #3d3d3d !important;
-            font-family: 'Forum', cursive !important;
             font-size: 10.6757px;
-            font-size: 60%;
             margin: auto;
+            letter-spacing: 2.5px;
+            overflow: clip;
         }
         .row{
             display: flex;
@@ -35,16 +68,13 @@
             display: flex;
             flex-direction: column;
         }
-        .title{
-            font-family: 'Biryani', sans-serif !important;
-        }
         .header{
             position: relative;
             /* margin-top: 100px; */
         }
         .page_no{
-            font-family: 'Biryani', sans-serif !important;
             padding-top: 15px;
+            margin-bottom: 45px;
         }
         .brown{
             color: #7b440b!important;
@@ -52,29 +82,57 @@
         .page_name{
             font-size: 22.9993px;
             font-weight: bold;
-            margin-top: 30px;
+            margin-top: 52.5px;
             margin-bottom: 36px;
+            font-family: 'lovelace', serif !important;
+            letter-spacing: 10px;
         }
         .logo{
             position: absolute;
             right: 0px;
-            top: 22.5px;
+            top: 74px;
             font-size: 36.1804px;
+            letter-spacing: 10px;
+        }
+        .company_name{
+            margin-bottom: 52.5px;
+            white-space: nowrap;
+        }
+        .company_name .vat{
+            padding-left: 50px;
         }
         .invoice_info{
             position: relative;
-            height: 128px;
             margin-bottom: 50px;
+            margin-top: 35px;
+            white-space: nowrap;
         }
         .invoice_by{
-            position:absolute;
-            right: 30px;
+            padding-left: 50px;
+            /* padding-top: 16px; */
+            white-space: normal;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+        .ocr{
+            margin-top: 20px;
+        }
+        .extra_field{
+            padding-left: 160px;
         }
         .invoice_by_info{
             margin-bottom: 20px;
+        
+        }
+        .invoice_by div{
+            margin-bottom: 1px;
+        }
+        .invoice_for div{
+            margin-bottom: 1px;
         }
         .reminder_text{
-            margin-top: 15px;
+            margin-top: 105px;
+            text-align: justify;
         }
         .reminder_text_title{
             letter-spacing: 3.5px;
@@ -86,12 +144,64 @@
         .table{
             position: relative;
             margin-top: 37px;
+            white-space: nowrap;
+        }
+        .table .sec-col{
+            padding-left: 40px;
+        }
+        .titles .third-col{
+            padding-left: 100px !important;
+        }
+        .sec-row .third-col{
+            padding-left: 40px;
+        }
+        .third-row .third-col{
+            padding-left: 92.5px;
+        }
+        .fourth-row .third-col{
+            padding-left: 45px;
+        }
+        .fifth-row .third-col{
+            padding-left: 20px;
+        }
+        .sixth-row .third-col{
+            padding-left: 42.5px;
+        }
+        .seventh-row .third-col{
+            padding-left: 95px;
+        }
+        .eigth-row .third-col{
+            padding-left: 115px;
+        }
+        .titles .fourth-col{
+            padding-left: 30px !important;
+        }
+        .fourth-col{
+            padding-left: 40px;
+        }
+        .fifth-col{
+            padding-left: 50px;
+        }
+        .titles .fifth-col{
+            padding-left: 20px;
+        }
+        .titles .sixth-col{
+            padding-left: 20px;
+        }
+        .sixth-col{
+            padding-left: 67.5px;
+        }
+        .titles .seventh-col{
+            padding-left: 40px;
+        }
+        .seventh-col{
+            padding-left: 70px;
         }
         .table .title{
             font-size: 13.333333333333332px;
         }
         .table_rows{
-            height: 40px;
+            height: 45px;
             display: flex;
             align-items: center;
             border-bottom: 1px solid #a6a6a6 ;
@@ -112,6 +222,7 @@
             position: absolute;
             right: 0;
             padding-right: 27.5px;
+            white-space: nowrap;
         }
         .payment{
             position: relative;
@@ -122,12 +233,16 @@
         .bank_transfer div{
             margin-bottom: 5px;
         }
+        .payment_method .title{
+            margin-bottom: 20px;
+        }
         .terms{
             margin-top: 26px;
         }
         .payment_method .title{
             margin-bottom: 15px;
             font-size: 16px;
+            margin-bottom: 20px;
         }
         .total{
             position: absolute;
@@ -136,6 +251,7 @@
             padding-right: 25px;
             font-size: 13.333333333333332px;
             text-align: end;
+            white-space: nowrap;
         }
         .total .col div{
             margin-bottom: 15px;
@@ -165,12 +281,12 @@
         }
         .footer{
             color: #623405;
-            /* margin-top: 67.5px; */
-            position:absolute;
-            top: 14in;
+            margin-top: 130px;
+            letter-spacing: 0 !important;
         }
         .footer i{
             margin-right: 15px;
+            font-size: 22px;
         }
         .footer .mail{
             margin-left: 100px;
@@ -179,9 +295,8 @@
             margin-left: 40px;
         }
         .footer_key{
-            position:absolute;
-            left: 140px;
-            top: 40px;
+            margin-top: 22.5px;
+            padding-left: 145px;
         }
         .inline{
             display: inline;
@@ -189,23 +304,36 @@
         .inline_block{
             display: inline-block;
         }
+        .thanks{
+            font-size: 38.8px;
+            margin-top: 35px;
+        }
     </style>
-
 </head>
 <body>
 
-    <div class="container">
+    <div class="container evolve">
 
         <!------------------------HEADER---------------->
         <div class="header">
             <div class="page_no">
                 <p>PAGE 1/1</p>
             </div>
-            <div class="title inline Header">
-                <h1 class="inline">REMINDER</h1>
+            <div class="row company_name">
+                <div class="col inline_block">
+                    <div>&#60;company_name></div>
+                    <div>&#60;organisation_number></div>
+                </div>
+                <div class="col vat inline_block">
+                    <div>&#60;vat_number></div>
+                    <div>Godkänd för F-skatt</div>
+                </div>
+            </div>
+            <div class="title inline Header page_name">
+                <h1 class="inline brown">INVOICE</h1>
             </div>
             <div class="logo inline Header">
-                <h2 class="inline">LOGO</h2>
+                <h2 class="inline cormorant">LOGO</h2>
             </div>
         </div>
 
@@ -213,69 +341,116 @@
 
         <!-----------------------INVOICE INFO----------->
         <div class="invoice_info">
-            <div class="col invoice_for inline_block">
-                <div><b>INVOICE FOR</b></div>
-                <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
-                <div>Date: 21/05/2022</div>
-                <div>Number: +123-456-7890</div>
-                <div>&#60;receiver_extra_field1>: &#60;value1></div>
-                <div>&#60;receiver_extra_field2>: &#60;value2></div>
-            </div>
-            <div class="col invoice_by inline">
-                <div class="invoice_by_info">
-                    <div><b>INVOICE BY</b></div>
-                    <div>&#60;company_name></div>
-                    <div>&#60;organisation_number></div>
-                    <div>&#60;vat_number></div>
-                    <div>Godkänd för F-skatt</div>
+            <div class="open_sauce"><b>INVOICE FOR</b></div>
+            <div class="row">
+                <div class="col invoice_for inline_block">
+                    <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
+                    <div>Date: 21/05/2022</div>
+                    <div>Number: +123-456-7890</div>
+                    <div>&#60;receiver_extra_field1>: &#60;value1></div>
+                    <div>&#60;receiver_extra_field2>: &#60;value2></div>
                 </div>
-                <div class="ocr">
+                <div class="col invoice_by inline_block">
+                    <div class="invoice_by_info">
+                        <div><b>Our reference:</b> 
+                            QIXRXA 20LRJ9 BLG6IZ 1FBUCU OAQR4R
+                            HUEP1S 1AIQFZ 7FO5M3 AQZC6D QV1QSC</div>
+                        <div><b>Your reference:</b> IBT0YV V07UD5 4WHHIT LR9NCC B1Q1XR
+                            9HWEUR EXW28E W37S24 YT648F FGOXFM</div>
+                        <div><b>Order numbder:</b>  9765433223335566</div>
+                        <div><b>Reference 1:</b> 09876444</div>
+                        <div><b>Reference 2:</b> 97689665</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ocr">
+                <div class="col inline_block">
                     <div>OCR No: 12345</div>
                     <div>Reminder number: 2857193521</div>
                     <div>Date: 23/06/2023</div>
                     <div>Due date: 30/06/2023</div>
                 </div>
+                <div class="col extra_field inline_block">
+                    <div><b>&#60;extra_field_key1>:</b> 0000</div>
+                    <div><b>&#60;extra_field_key2>:</b> 0000</div>
+                    <div><b>&#60;extra_field_key3>:</b> 0000</div>
+                </div>
             </div>
         </div> 
 
-        <!------------------REMINDER TEXT--------------->
-        <div class="col reminder_text">
-            <div class="reminder_text_title"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
-            <div class="upper_text">
-                Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna
-                påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att
-                överlämnas till inkasso vilket medför ytterligare kostnader.
-            </div>
-            <div>
-                Ār fakturan redan betald?</br>
-                Om du har betalat rekommenderar vi dig att kontrollera att du har betalat till rätt bankgiro och med rätt referens.
-            </div>
-        </div>
-
-        <!--------------------REMINDER TABLE-------------->
+        <!--------------------TABLE-------------->
         <div class="table col">
-            <div class="table_rows odd inline-block">
-                <div class="title">REMINDER REFERS TO.</div>
+            <div class="titles cormorant table_rows odd inline-block brown">
+                <div class="title inline_block">NO.</div>
+                <div class="title inline_block sec-col">DESCRIPTION</div>
+                <div class="title inline_block third-col">QTY</div>
+                <div class="title inline_block fourth-col">PRICE</div>
+                <div class="title inline_block fifth-col">DISCOUNT</div>
+                <div class="title inline_block sixth-col">VAT-RATE</div>
+                <div class="title inline_block seventh-col">TOTAL</div>
             </div>
-            <div class="row table_rows even">
-                <div class="inline_block">Invoice:</div>
-                <div class="value inline_block">$ 100</div>
+            <div class="row sec-row table_rows even">
+                <div class="inline_block">0000</div>
+                <div class="inline_block sec-col">Graphic design consultation</div>
+                <div class="inline_block third-col">1</div>
+                <div class="inline_block fourth-col">$ 100</div>
+                <div class="inline_block fifth-col">$ 100</div>
+                <div class="inline_block sixth-col">$ 100</div>
+                <div class="inline_block seventh-col">$ 100</div>
             </div>
-            <div class="row table_rows odd">
-                <div class="inline_block">Invoce amount:</div>
-                <div class="value inline_block">$ 750</div>
+            <div class="row third-row table_rows odd">
+                <div class="inline_block">0000</div>
+                <div class="inline_block sec-col">Project development</div>
+                <div class="inline_block third-col">1</div>
+                <div class="inline_block fourth-col">$ 750</div>
+                <div class="inline_block fifth-col">$ 750</div>
+                <div class="inline_block sixth-col">$ 750</div>
+                <div class="inline_block seventh-col">$ 750</div>
             </div>
-            <div class="row table_rows even">
-                <div class="inline_block">Due date:</div>
-                <div class="value inline_block">$ 500</div>
+            <div class="row fourth-row table_rows even">
+                <div class="inline_block">0000</div>
+                <div class="inline_block sec-col">Graphic resources creation</div>
+                <div class="inline_block third-col">2</div>
+                <div class="inline_block fourth-col">$ 250</div>
+                <div class="inline_block fifth-col">$ 250</div>
+                <div class="inline_block sixth-col">$ 250</div>
+                <div class="inline_block seventh-col">$ 500</div>
             </div>
-            <div class="row table_rows odd">
-                <div class="inline_block">Reminder fee:</div>
-                <div class="value inline_block">$ 300</div>
+            <div class="row fifth-row table_rows odd">
+                <div class="inline_block">0000</div>
+                <div class="inline_block sec-col">Social media graphics concepts</div>
+                <div class="inline_block third-col">1</div>
+                <div class="inline_block fourth-col">$ 300</div>
+                <div class="inline_block fifth-col">$ 300</div>
+                <div class="inline_block sixth-col">$ 300</div>
+                <div class="inline_block seventh-col">$ 300</div>
             </div>
-            <div class="row table_rows even">
-                <div class="inline_block">Interest fee:</div>
-                <div class="value inline_block">$ 100</div>
+            <div class="row sixth-row table_rows even">
+                <div class="inline_block">0000</div>
+                <div class="inline_block sec-col">Graphic design consultation</div>
+                <div class="inline_block third-col">1</div>
+                <div class="inline_block fourth-col">$ 100</div>
+                <div class="inline_block fifth-col">$ 100</div>
+                <div class="inline_block sixth-col">$ 100</div>
+                <div class="inline_block seventh-col">$ 100</div>
+            </div>
+            <div class="row seventh-row table_rows odd">
+                <div class="inline_block">0000</div>
+                <div class="inline_block sec-col">Project development</div>
+                <div class="inline_block third-col">1</div>
+                <div class="inline_block fourth-col">$ 250</div>
+                <div class="inline_block fifth-col">$ 250</div>
+                <div class="inline_block sixth-col">$ 250</div>
+                <div class="inline_block seventh-col">$ 250</div>
+            </div>
+            <div class="row eigth-row table_rows even">
+                <div class="inline_block">0000</div>
+                <div class="inline_block sec-col">2 months support</div>
+                <div class="inline_block third-col">1</div>
+                <div class="inline_block fourth-col">$ 300</div>
+                <div class="inline_block fifth-col">$ 300</div>
+                <div class="inline_block sixth-col">$ 300</div>
+                <div class="inline_block seventh-col">$ 300</div>
             </div>
         </div>
 
@@ -286,8 +461,8 @@
                 <div class="row">
                     <div class="col payment_method">
                         <div class="title"><b>Payment Method</b></div>
-                        <div>Bankgiro-number: 1234-5678</div>
-                        <div>Plusgiro-number: 1234567-345</div>
+                        <div>Bankgiro-number: 12345-432</div>
+                        <div>Plusgiro-number:  12345653-222</div>
                         <div>Swish-number: 12345678</div>
                     </div>
                     <div class="total">
@@ -304,6 +479,9 @@
                             <div>$ 207</div>
                             <div>$ 207</div>
                             <div class="total_value"><b>$ 2 507</b></div>
+                        </div>
+                        <div class="thanks brown beautifully_delicious">
+                            Thank you
                         </div>
                     </div>
                 </div>
@@ -324,6 +502,7 @@
                         Terms of payment: 6
                     </div>
                     <div>Late interest rate: 10.50% per annum</div>
+                    <div>Invoice period: &#60;invoice_period></i></div>
                 </div>
             </div>
         </div>
